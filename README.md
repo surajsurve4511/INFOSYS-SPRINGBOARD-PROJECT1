@@ -1,218 +1,214 @@
-# 🔋 Smart Energy Consumption Analysis and Forecasting
+# ⚡ Smart Energy Consumption Analysis & Prediction
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange.svg)](https://www.tensorflow.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Complete-success.svg)]()
+> **AI/ML-Driven Analysis and Forecasting of Device-Level Energy Consumption**  
+> Infosys Springboard Internship Project
 
-A comprehensive data science project analyzing household electric power consumption patterns using **Machine Learning (Linear Regression)** and **Deep Learning (LSTM)** techniques to forecast energy usage and provide actionable insights for smart energy management.
-
----
-
-## 📌 Project Overview
-
-This project analyzes the **Individual Household Electric Power Consumption Dataset** from the UCI Machine Learning Repository to:
-- 📊 Understand energy consumption patterns at the device level
-- 🔮 Perform time-series forecasting using Linear Regression (baseline) and LSTM (advanced)
-- 💡 Provide actionable insights for smart energy management
-
-### 🎓 Infosys Springboard Internship - Project 1
-
-**Author:** Suraj  
-**Date:** January 2026  
-**Milestone:** Week 1-2 Complete
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![Flask](https://img.shields.io/badge/Flask-3.0-green)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange)
+![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
+![Milestones](https://img.shields.io/badge/Milestones-4%2F4%20Complete-brightgreen)
+![Last Updated](https://img.shields.io/badge/Last%20Updated-February%202026-blue)
 
 ---
 
-## 📊 Dataset Information
+## 📋 Overview
 
-| Attribute | Description |
-|-----------|-------------|
-| **Source** | [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption) |
-| **Time Period** | December 2006 - November 2010 (~4 years) |
-| **Records** | 2,075,259 minute-level measurements |
-| **Size** | ~127 MB |
+A comprehensive smart energy monitoring system that analyzes device-level electricity consumption, predicts future usage using LSTM deep learning, and provides actionable energy-saving recommendations through an interactive web dashboard.
 
-### Key Features
-
-| Feature | Description |
-|---------|-------------|
-| `Global_active_power` | Total household active power consumption (kW) |
-| `Global_reactive_power` | Household reactive power consumption (kW) |
-| `Voltage` | Minute-averaged voltage (V) |
-| `Global_intensity` | Household current intensity (A) |
-| `Sub_metering_1` | Kitchen (dishwasher, oven, microwave) |
-| `Sub_metering_2` | Laundry (washing machine, dryer, refrigerator, light) |
-| `Sub_metering_3` | HVAC (water heater, air-conditioner) |
+### Key Achievements
+- 📊 Processed **259,201** minute-level energy records (6 months)
+- 🧠 **99.4% prediction accuracy** with LSTM neural network
+- 📈 **75.4% improvement** over baseline Linear Regression
+- 🌐 Interactive web dashboard with real-time insights
+- 💡 Smart suggestions engine with cost estimates
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- **Python 3.8+**
-- **Pandas & NumPy** - Data manipulation and analysis
-- **Matplotlib & Seaborn** - Data visualization
-- **Scikit-learn** - Machine learning (Linear Regression, preprocessing)
-- **TensorFlow/Keras** - Deep learning (LSTM neural networks)
-- **Jupyter Notebook** - Interactive development environment
+| Layer | Technology |
+|-------|------------|
+| **Data Processing** | Python, Pandas, NumPy, SciPy |
+| **Visualization** | Matplotlib, Seaborn, Chart.js |
+| **Machine Learning** | Scikit-learn (Linear Regression) |
+| **Deep Learning** | TensorFlow/Keras (LSTM) |
+| **Web Backend** | Flask, Flask-CORS |
+| **Web Frontend** | HTML5, CSS3, JavaScript |
+| **Dataset** | UCI Individual Household Electric Power Consumption |
 
 ---
 
 ## 📁 Project Structure
 
 ```
-📦 INFOSYS-SPRINGBOARD-PROJECT1
-├── 📓 Smart_Energy_Analysis.ipynb    # Main analysis notebook
-├── 📄 household_power_consumption.txt # Dataset file (download separately)
-├── 📋 requirements.txt               # Python dependencies
-├── 📖 README.md                      # Project documentation
-└── 🚫 .gitignore                     # Git ignore rules
+Project/
+├── app.py                      # Flask web application (Milestone 4)
+├── main.py                     # Pipeline orchestrator (all milestones)
+├── requirements.txt            # Python dependencies
+│
+├── src/                        # Source modules
+│   ├── data_preprocessing.py   # Milestone 1: Data cleaning & EDA
+│   ├── feature_engineering.py  # Milestone 2: Feature creation
+│   ├── baseline_model.py       # Milestone 2: Linear Regression
+│   ├── lstm_model.py           # Milestone 3: LSTM model
+│   └── smart_suggestions.py    # Milestone 4: AI suggestions engine
+│
+├── templates/
+│   └── index.html              # Dashboard frontend
+│
+├── static/
+│   ├── css/style.css           # Dashboard styling
+│   └── js/dashboard.js         # Dashboard interactivity
+│
+├── models/                     # Saved model artifacts
+│   ├── lstm_best_model.keras
+│   ├── lstm_scaler.pkl
+│   ├── minmax_scaler.pkl
+│   └── linear_regression_model.pkl
+│
+├── processed_data/             # Processed datasets
+│   ├── data_hourly.csv
+│   ├── data_daily.csv
+│   ├── data_features.csv
+│   ├── train_data.csv
+│   ├── val_data.csv
+│   ├── test_data.csv
+│   └── lstm_predictions.csv
+│
+├── visualizations/             # Generated charts
+│   ├── Milestone1_Module1_EDA.png
+│   ├── Milestone1_Module2_Preprocessing.png
+│   ├── Milestone2_Module3_FeatureEngineering.png
+│   ├── Milestone2_Module4_BaselineModel.png
+│   ├── Milestone3_LSTM_Complete.png
+│   └── Milestone3_Model_Comparison.png
+│
+├── Dataset/                    # Raw dataset
+│   └── household_power_consumption.txt
+│
+├── notebooks/                  # Consolidated notebook
+│   └── Smart_Energy_Analysis_Complete.py
+│
+├── Docs/                       # Documentation
+└── References/                 # Reference materials
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
-### Prerequisites
+### 1. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
 
-- Python 3.8 or higher
-- pip package manager
+### 2. Run the ML Pipeline (Milestones 1–3)
+```bash
+python main.py --pipeline
+```
 
-### Installation
+### 3. Launch the Web Dashboard (Milestone 4)
+```bash
+python main.py --dashboard
+# OR
+python app.py
+```
+Open **http://localhost:5000** in your browser.
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/surajsurve4511/INFOSYS-SPRINGBOARD-PROJECT1.git
-   cd INFOSYS-SPRINGBOARD-PROJECT1
-   ```
-
-2. **Download the Dataset**
-   
-   The dataset is too large for GitHub. Download it from the UCI ML Repository:
-   
-   - 📥 **Download Link:** [UCI ML Repository - Household Power Consumption](https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption)
-   - Or use direct link: [Download ZIP](https://archive.ics.uci.edu/ml/machine-learning-databases/00235/household_power_consumption.zip)
-   
-   After downloading:
-   ```bash
-   # Extract the zip file and place household_power_consumption.txt in the project root
-   unzip household_power_consumption.zip
-   ```
-
-3. **Create a virtual environment (recommended)**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-4. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. **Launch Jupyter Notebook**
-   ```bash
-   jupyter notebook Smart_Energy_Analysis.ipynb
-   ```
+### 4. Run Everything (Pipeline + Dashboard)
+```bash
+python main.py --all
+```
 
 ---
 
-## 📈 Analysis Pipeline
+## 📊 Milestones
 
-### 1️⃣ Data Preprocessing
-- Handled ~1.25% missing values using forward-fill interpolation
-- Created DateTime index from Date + Time columns
-- Resampled data to hourly/daily granularity for efficient analysis
+### Milestone 1: Data Collection & Preprocessing (Weeks 1–2)
+- Loaded UCI Household Electric Power Consumption dataset (259,201 records)
+- Handled missing values with forward/backward fill
+- Outlier detection & capping (IQR method at 99th percentile)
+- Timestamp conversion and datetime indexing
+- Resampling: Minute → Hourly (4,321 records) → Daily (181 records)
+- MinMax normalization and 70/15/15 train-val-test split
 
-### 2️⃣ Feature Engineering
-- **Temporal features:** Hour, Day of Week, Month, Season, Weekend indicator
-- **Lag features:** Previous hour/day consumption values
-- **Rolling statistics:** Moving averages and standard deviations
-- **Cyclical encoding:** Sine/cosine transformations for time features
+### Milestone 2: Feature Engineering & Baseline Model (Weeks 3–4)
+- Created **53 engineered features**: time-based (18), lag (12), rolling window (10), device aggregation (5), statistical (2), difference (2)
+- Trained Linear Regression baseline model
+- Baseline R² = 0.8654, MAE = 0.085 kW
 
-### 3️⃣ Exploratory Data Analysis
-- Time-series decomposition and trend analysis
-- Hourly, daily, and seasonal consumption patterns
-- Device-level (sub-metering) usage analysis
-- Correlation analysis between features
+### Milestone 3: LSTM Deep Learning Model (Weeks 5–6)
+- 3-layer LSTM architecture (128→64→32 units) with dropout
+- 24-hour look-back window for sequential prediction
+- Hyperparameter tuning across 5 configurations
+- **LSTM R² = 0.9944, MAE = 0.0005 kW** (99.4% accuracy)
+- 75.4% average improvement over baseline
 
-### 4️⃣ Predictive Modeling
-- **Linear Regression** - Baseline model with engineered features
-- **LSTM Neural Network** - Advanced deep learning model for sequential data
-
----
-
-## 🎯 Key Findings
-
-### Temporal Patterns
-- ⏰ **Peak Hours:** 7-9 AM (morning routine) and 6-9 PM (evening activities)
-- ❄️ **Seasonal:** Winter consumption 20-30% higher than summer
-- 📅 **Weekly:** Weekend patterns differ significantly from weekdays
-
-### Device-Level Insights
-- 🌡️ **HVAC (Sub_metering_3):** Accounts for 40-50% of total consumption
-- 🍳 **Kitchen appliances:** Clear meal-time usage spikes
-- 🧺 **Laundry:** Increased usage on weekends
-
-### Model Performance
-
-| Model | R² Score | RMSE (kW) |
-|-------|----------|-----------|
-| Linear Regression | ~0.85 | ~0.15 |
-| LSTM | ~0.90 | ~0.12 |
+### Milestone 4: Web Dashboard & Smart Suggestions (Weeks 7–8)
+- Flask API backend with 10 endpoints
+- Interactive Chart.js dashboard with dark theme
+- 6 dashboard sections: Overview, Devices, Predictions, Model Comparison, Smart Suggestions, Visualizations
+- Smart suggestions engine with:
+  - Device-specific energy saving tips
+  - Time-of-use optimization
+  - Anomaly detection (z-score based)
+  - Cost estimation and savings potential
 
 ---
 
-## 💡 Recommendations for Smart Energy Management
+## 🧠 Model Architecture
 
-1. **Time-of-Use Awareness:** Schedule high-energy tasks during off-peak hours
-2. **HVAC Optimization:** Implement smart thermostat scheduling based on occupancy
-3. **Load Shifting:** Move flexible loads (laundry, dishwasher) to off-peak times
-4. **Predictive Management:** Use forecasting models for proactive demand control
-
----
-
-## 📊 Visualizations
-
-The notebook includes comprehensive visualizations:
-- 📈 Time-series plots of power consumption
-- 🕐 Hourly and daily consumption heatmaps
-- 📊 Device-level usage distribution charts
-- 🔮 Model prediction vs actual comparisons
-
----
-
-## 🔮 Future Enhancements
-
-- [ ] Implement additional models (XGBoost, Prophet)
-- [ ] Add anomaly detection for unusual consumption patterns
-- [ ] Create interactive dashboard using Streamlit/Dash
-- [ ] Integrate real-time data streaming capabilities
-- [ ] Deploy model as REST API
+```
+┌─────────────────────────────────────────────────────────┐
+│  Input Layer:     (batch_size, 24, 4)                   │
+│       ↓                                                  │
+│  LSTM Layer 1:    128 units + Dropout(0.2)              │
+│       ↓                                                  │
+│  LSTM Layer 2:    64 units + Dropout(0.2)               │
+│       ↓                                                  │
+│  LSTM Layer 3:    32 units + Dropout(0.2)               │
+│       ↓                                                  │
+│  Dense Layer:     16 units (ReLU)                       │
+│       ↓                                                  │
+│  Output Layer:    1 unit (Power Prediction)             │
+└─────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 📜 License
+## 📈 Results
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **UCI Machine Learning Repository** for the dataset
-- **Infosys Springboard** for the internship opportunity
-- **TensorFlow Team** for the deep learning framework
+| Metric | Linear Regression | LSTM | Improvement |
+|--------|------------------|------|-------------|
+| MAE (kW) | 0.0850 | 0.0005 | +99.4% |
+| RMSE (kW) | 0.1120 | 0.0006 | +99.5% |
+| R² Score | 0.8654 | 0.9944 | +14.9% |
+| MAPE (%) | 12.45 | 1.52 | +87.8% |
 
 ---
 
-## 📫 Contact
+## 🌐 Dashboard Features
 
-**Suraj Surve**
-- GitHub: [@surajsurve4511](https://github.com/surajsurve4511)
+| Section | Description |
+|---------|-------------|
+| **Overview** | Key metrics, power trends, 24h consumption pattern |
+| **Devices** | Kitchen, Laundry, HVAC consumption breakdown with share % |
+| **Predictions** | LSTM actual vs predicted chart, error distribution |
+| **Model Comparison** | Baseline vs LSTM side-by-side with improvement % |
+| **Smart Suggestions** | AI-generated energy saving tips, cost estimates, anomaly alerts |
+| **Visualizations** | Gallery of all milestone visualization charts |
 
 ---
 
-<p align="center">
-  <b>⭐ If you found this project helpful, please give it a star!</b>
-</p>
+## 👤 Author
+
+**Suraj Surve**  
+Infosys Springboard Internship  
+Project: AI/ML-Driven Device-Level Energy Analysis & Forecasting
+
+---
+
+## 📝 License
+
+This project is developed as part of the Infosys Springboard Internship Program.

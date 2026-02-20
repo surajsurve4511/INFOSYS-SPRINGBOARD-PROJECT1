@@ -1,22 +1,24 @@
-# Smart Energy Consumption Analysis - Requirements
-# Install using: pip install -r requirements.txt
-# Or install all in one line: pip install pandas numpy matplotlib seaborn scikit-learn tensorflow jupyter notebook ipykernel
+# Smart Energy Consumption Analysis System
+# Infosys Springboard Internship Project
 
-# Data Manipulation
-pandas
-numpy
-
-# Visualization
-matplotlib
-seaborn
+# Core Data Science
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
 
 # Machine Learning
-scikit-learn
+scikit-learn>=1.3.0
+tensorflow>=2.15.0
+joblib>=1.3.0
 
-# Deep Learning (LSTM)
-tensorflow
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
 
-# Jupyter Notebook
-jupyter
-notebook
-ipykernel
+# Web Application
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# Utilities
+warnings-filter>=0.1.0
+gunicorn>=21.2.0
