@@ -17,9 +17,9 @@ import numpy as np
 from datetime import datetime
 
 
-# Average electricity rate (INR per kWh) - Indian residential tariff
-ELECTRICITY_RATE = 7.0  # ₹/kWh (adjustable)
-CURRENCY_SYMBOL = "₹"
+# Average electricity rate (USD per kWh) - US residential tariff
+ELECTRICITY_RATE = 0.12  # $/kWh (adjustable)
+CURRENCY_SYMBOL = "$"
 
 DEVICE_MAPPING = {
     'Sub_metering_1': {
